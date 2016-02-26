@@ -1,5 +1,5 @@
 
-class CaeserEncryption:
+class CaesarEncryption:
 
     _alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
