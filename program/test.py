@@ -18,5 +18,9 @@ class Test(unittest.TestCase):
         c = main.CaeserEncryption(test_key)
         self.assertEqual(c.key_alphabet, "REGNSCHIMTADZYXWVUQPOLKJFB")
 
+    def test_encrypt(self):
+        c = main.CaeserEncryption("REGENSCHIRMSTAENDER")
+        self.assertEqual(c.encrypt("WASSER KOCHT IM TEEKESSEL"), "KRQQSU AXGIP MZ PSSASQQSD")
+
 if __name__ == "__main__":
     unittest.main()

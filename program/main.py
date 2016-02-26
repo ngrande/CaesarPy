@@ -24,7 +24,16 @@ class CaeserEncryption:
         while len(unique_input) < 26:
             if not reversed_alphabet[i] in unique_input:
                 unique_input += reversed_alphabet[i]
-            # else:
             i += 1
 
         return unique_input
+
+    def encrypt(self, input):
+        result = ""
+        for x in input:
+            if not x in " ":
+                index = self._alphabet.index(x)
+                result += self.key_alphabet[index]
+            else:
+                result += " "
+        return result
